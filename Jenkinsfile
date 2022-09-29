@@ -47,14 +47,14 @@ pipeline {
  pollSCM('* * * * *')
     }
     environment {
-    registry = '076892551558.dkr.ecr.us-east-1.amazonaws.com/devop_repository'
-    registryCredential = 'jenkins-ecr'
+    registry = '973240959233.dkr.ecr.us-east-1.amazonaws.com/devop_repository'
+    registryCredential = 'devop_repository'
     dockerimage = ''
   }
     stages {
         stage('Checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/Hermann90/helloworld_jan_22.git'
+                git branch: 'main', url: 'https://github.com/tyriqmartin/helloworld_jan_22.git'
             }
         }
         stage('Code Build') {
